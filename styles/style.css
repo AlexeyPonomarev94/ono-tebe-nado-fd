@@ -74,16 +74,22 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 334px;
   min-height: 596px;
   padding: 48px 40px;
+
+  background-color: #e5e5e5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-/* --- Header --- */
+/* --- Section Header --- */
 
-.header {
+.header__column {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
@@ -122,14 +128,17 @@
   max-width: 240px;
 }
 
-/* --- Cover --- */
+/* --- Section Cover --- */
 
-.cover {
+.cover__inner {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #e5e5e5;
+}
+
+.cover__media {
+  background: #e5e5e5;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -189,7 +198,7 @@
   word-spacing: 18.5px;
 }
 
-/* --- Lots ---*/
+/* --- Section Lots ---*/
 
 .lots__heading {
   margin-bottom: 27px;
@@ -214,32 +223,16 @@
   min-height: 596px;
 }
 
-.card {
-  position: relative;
-}
-
 .card_type_film {
-  background-color: #e5e5e5;
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
-  background-color: #e5e5e5;
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
-  background-color: #e5e5e5;
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card__title {
@@ -272,7 +265,7 @@
   text-transform: lowercase;
 }
 
-/* --- About --- */
+/* --- Section About --- */
 
 .about__column {
   display: grid;
@@ -280,6 +273,7 @@
 }
 
 .about__logo {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,9 +327,9 @@
   width: 693px;
 }
 
-/* --- Footer --- */
+/* --- Section Footer --- */
 
-.footer {
+.footer__column {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
